@@ -6,7 +6,6 @@ const axios = require('axios');
 router.post('/', function(req, res, next) {
   const { address, apiKey, addressType } = req.body;
   const addresses = address.split("\n")
-  console.log(addresses);
   const provider = 'ca';
   const url = `https://fusion.blocktrace.com/api/v1/bulk/${provider}/cluster/summary`;
   const headers = {
