@@ -23,7 +23,7 @@ router.post('/', function(req, res, next) {
     })
     .catch((error) => {
       console.log(error);
-      res.status(500).send('Internal Server Error');
+      res.status(error.response.status).send(error.response.data.message);
     });
 });
 
