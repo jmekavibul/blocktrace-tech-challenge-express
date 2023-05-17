@@ -4,7 +4,6 @@ const axios = require('axios');
 
 /* Get Info From Submit */
 router.post('/', function(req, res, next) {
-  res.render('test on heroku app');
   const { address, apiKey, addressType } = req.body;
   const addresses = address.split("\n"); // Assume the input is similar to that of the email
   const provider = 'ca'; // For future providers
